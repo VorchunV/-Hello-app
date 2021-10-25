@@ -42,7 +42,7 @@
                                             <fontDescription key="titleFontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="7h3-zm-ttc" kind="presentation" id="vQt-9U-2hK"/>
+                                            <segue destination="7h3-zm-ttc" kind="presentation" modalPresentationStyle="fullScreen" id="vQt-9U-2hK"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="vAg-Sk-yBg">
@@ -89,11 +89,11 @@
             <objects>
                 <viewController id="7h3-zm-ttc" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4NM-V3-2rY">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="p8g-KJ-aSs">
-                                <rect key="frame" x="75" y="170" width="240" height="164.33333333333337"/>
+                                <rect key="frame" x="75" y="214" width="240" height="164.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdx-WN-vJ1">
                                         <rect key="frame" x="67.333333333333343" y="0.0" width="105.66666666666666" height="64.666666666666671"/>
@@ -110,7 +110,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpL-Ee-Bs4">
-                                <rect key="frame" x="108" y="548" width="174" height="54"/>
+                                <rect key="frame" x="108" y="575" width="174" height="54"/>
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
