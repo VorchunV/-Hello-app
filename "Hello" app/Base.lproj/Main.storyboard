@@ -42,7 +42,7 @@
                                             <fontDescription key="titleFontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="logInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M4R-mu-W47"/>
+                                            <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="80u-gb-147"/>
                                             <segue destination="7h3-zm-ttc" kind="show" id="vQt-9U-2hK"/>
                                         </connections>
                                     </button>

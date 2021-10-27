@@ -20,8 +20,12 @@ class ViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
+        welcomeVC.userWelcomeLabel = user
+    }
     
-    @IBAction func logInPressed(_ sender: Any) {
+    @IBAction func logInPressed() {
         if userNamelabel.text != user || passwordLabel.text != password {
             showAlert(title: "Invalid login or password",
                       message: "Please, enter correct login and password"
