@@ -77,7 +77,8 @@ extension ViewController: UITextFieldDelegate {
             passwordLabel.becomeFirstResponder()
         } else if textField == passwordLabel {
             textField.resignFirstResponder()
-            logInPressed()
+            self.logInPressed()
+            self.performSegue(withIdentifier: "welcomeVC", sender: self)
         }
         return true
     }

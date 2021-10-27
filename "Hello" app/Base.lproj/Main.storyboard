@@ -43,7 +43,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="80u-gb-147"/>
-                                            <segue destination="7h3-zm-ttc" kind="show" id="vQt-9U-2hK"/>
+                                            <segue destination="7h3-zm-ttc" kind="show" identifier="welcomeVC" id="vQt-9U-2hK"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="vAg-Sk-yBg">
