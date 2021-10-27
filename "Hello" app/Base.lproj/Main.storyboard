@@ -25,12 +25,12 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VNE-4c-iG6">
                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IdG-al-3w0">
                                                 <rect key="frame" x="0.0" y="74" width="350" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -42,7 +42,8 @@
                                             <fontDescription key="titleFontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="7h3-zm-ttc" kind="presentation" modalPresentationStyle="fullScreen" id="vQt-9U-2hK"/>
+                                            <action selector="logInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M4R-mu-W47"/>
+                                            <segue destination="7h3-zm-ttc" kind="show" id="vQt-9U-2hK"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="vAg-Sk-yBg">
@@ -55,6 +56,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot your name?">
                                                     <fontDescription key="titleFontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="forgotName" destination="BYZ-38-t0r" eventType="touchUpInside" id="9NB-Tx-8JN"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQ0-kS-CO3">
                                                 <rect key="frame" x="160" y="0.0" width="190" height="71.666666666666671"/>
@@ -63,6 +67,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot your password?">
                                                     <fontDescription key="titleFontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="forgotPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tsl-El-70M"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -79,21 +86,25 @@
                             <constraint firstAttribute="trailing" secondItem="r6V-3K-ndQ" secondAttribute="trailing" constant="20" id="yy9-bi-Oyn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordLabel" destination="IdG-al-3w0" id="4ei-Ys-DH9"/>
+                        <outlet property="userNamelabel" destination="VNE-4c-iG6" id="Kzn-Tt-OKN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="33.75" y="117.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="pN9-rh-crd">
             <objects>
-                <viewController id="7h3-zm-ttc" sceneMemberID="viewController">
+                <viewController id="7h3-zm-ttc" customClass="WelcomeViewController" customModule="_Hello__app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4NM-V3-2rY">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="p8g-KJ-aSs">
-                                <rect key="frame" x="75" y="214" width="240" height="164.33333333333337"/>
+                                <rect key="frame" x="75" y="170" width="240" height="164.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdx-WN-vJ1">
                                         <rect key="frame" x="67.333333333333343" y="0.0" width="105.66666666666666" height="64.666666666666671"/>
@@ -110,7 +121,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpL-Ee-Bs4">
-                                <rect key="frame" x="108" y="575" width="174" height="54"/>
+                                <rect key="frame" x="108" y="548" width="174" height="54"/>
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log out">
@@ -130,6 +141,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LOW-Hs-FB8"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="zdx-WN-vJ1" id="jnG-kX-Ea2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lwu-70-4U4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
