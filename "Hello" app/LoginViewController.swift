@@ -17,7 +17,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        userNamelabel.delegate = self
+        passwordLabel.delegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,9 +53,11 @@ class ViewController: UIViewController {
         super .touchesBegan(touches, with: event)
         self.view.endEditing(true)
     }
+    
+
 }
 
-extension ViewController {
+extension ViewController: UITextFieldDelegate {
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(
             title: title,
@@ -68,5 +71,18 @@ extension ViewController {
         present(alert, animated: true)
     }
     
-}
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNamelabel {
+            textField.resignFirstResponder()
+            passwordLabel.becomeFirstResponder()
+        } else if textField == passwordLabel {
+            textField.resignFirstResponder()
+            logInPressed()
+        }
+        return true
+    }
     
+}
+
+
+
