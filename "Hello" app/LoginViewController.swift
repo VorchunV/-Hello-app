@@ -25,6 +25,11 @@ class ViewController: UIViewController {
         welcomeVC.userWelcomeLabel = user
     }
     
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNamelabel.text = ""
+        passwordLabel.text = ""
+    }
+    
     @IBAction func logInPressed() {
         if userNamelabel.text != user || passwordLabel.text != password {
             showAlert(title: "Invalid login or password",
@@ -42,6 +47,11 @@ class ViewController: UIViewController {
     @IBAction func forgotPassword() {
         showAlert(title: "Enter your password in the password field 🌿", message: "Your password is \(password).")
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
 }
 
 extension ViewController {
@@ -57,4 +67,6 @@ extension ViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+    
 }
+    
