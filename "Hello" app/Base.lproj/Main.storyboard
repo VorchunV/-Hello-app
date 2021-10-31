@@ -3,6 +3,7 @@
     <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -95,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="33.75" y="117.5"/>
         </scene>
-        <!--About me-->
+        <!--about-me-->
         <scene sceneID="pN9-rh-crd">
             <objects>
-                <viewController id="7h3-zm-ttc" customClass="WelcomeViewController" customModule="_Hello__app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="about-me" id="7h3-zm-ttc" customClass="WelcomeViewController" customModule="_Hello__app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4NM-V3-2rY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +144,7 @@
                             <constraint firstItem="zdD-yY-okS" firstAttribute="trailing" secondItem="p8g-KJ-aSs" secondAttribute="trailing" constant="75" id="zJw-b8-gmk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About me" selectedImage="book.fill" catalog="system" id="8oL-1o-Csi">
+                    <tabBarItem key="tabBarItem" title="Home" image="person" catalog="system" id="8oL-1o-Csi">
                         <color key="badgeColor" systemColor="labelColor"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="LOW-Hs-FB8"/>
@@ -159,7 +160,7 @@
         <!--About me-->
         <scene sceneID="4Bi-tw-enX">
             <objects>
-                <viewController id="soH-hi-OgP" userLabel="About me" sceneMemberID="viewController">
+                <viewController title="about-me-1" id="soH-hi-OgP" userLabel="About me" customClass="AboutMeViewController" customModule="_Hello__app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="P9B-St-DZt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,9 +191,11 @@
                             <constraint firstItem="VVm-sK-wCK" firstAttribute="leading" secondItem="fCP-lb-gJz" secondAttribute="leading" constant="20" id="aKg-aP-uel"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Dk5-QH-714"/>
+                    <navigationItem key="navigationItem" id="Dk5-QH-714">
+                        <barButtonItem key="rightBarButtonItem" title="Hobby" id="yM4-EI-wKO"/>
+                    </navigationItem>
                     <connections>
-                        <segue destination="qet-Gy-ndz" kind="show" id="TPb-VY-ofV"/>
+                        <segue destination="qet-Gy-ndz" kind="show" identifier="hobbySegue" id="TPb-VY-ofV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAa-eC-Ijw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -202,8 +205,8 @@
         <!--Hobby-->
         <scene sceneID="GXS-RB-A4C">
             <objects>
-                <viewController id="qet-Gy-ndz" userLabel="Hobby" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IyF-Dt-lUH">
+                <viewController title="hobby" id="qet-Gy-ndz" userLabel="Hobby" sceneMemberID="viewController">
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="IyF-Dt-lUH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -248,6 +251,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <nil key="selectedImageTintColor"/>
+                        </variation>
                     </tabBar>
                     <connections>
                         <segue destination="EZc-wc-j0I" kind="relationship" relationship="viewControllers" id="EJi-6l-sPH"/>
@@ -258,16 +264,17 @@
             </objects>
             <point key="canvasLocation" x="740" y="115.87677725118483"/>
         </scene>
-        <!--Home-->
+        <!--home-->
         <scene sceneID="2sM-AP-2g2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EZc-wc-j0I" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="person" catalog="system" id="TNW-iw-B6a">
+                <navigationController title="home" automaticallyAdjustsScrollViewInsets="NO" id="EZc-wc-j0I" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About me" image="book.fill" catalog="system" id="TNW-iw-B6a">
                         <color key="badgeColor" systemColor="labelColor"/>
+                        <imageReference key="selectedImage" image="person" catalog="system" symbolScale="medium"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="6Ob-dg-6qM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

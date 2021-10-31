@@ -12,8 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var userNamelabel: UITextField!
     @IBOutlet var passwordLabel: UITextField!
     
-    private let user = "Varvara"
-    private let password = "VarvaraG"
+    private let userV = User.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +21,15 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
-        welcomeVC.userWelcomeLabel = user
-    }
+        let tabBarController = segue.destination as! UITabBarController
+        for viewController in tabBarController.viewControllers! {
+               if  let welcomeVC = viewController as? WelcomeViewController {
+                   welcomeVC.userWelcomeLabel = userV.fullName
+                   tabBarController.selectedIndex = 1
+               }
+            
+           }
+       }
     
 // MARK: IBActions func
     
@@ -34,7 +39,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func logInPressed() {
-        if userNamelabel.text != user || passwordLabel.text != password {
+        if userNamelabel.text != userV.nameUser || passwordLabel.text != userV.passwordUser {
             showAlert(title: "Invalid login or password",
                       message: "Please, enter correct login and password"
             )
@@ -43,12 +48,12 @@ class ViewController: UIViewController {
     
     
     @IBAction func forgotName() {
-        showAlert(title: "Enter a name in the name field ☘️", message: "Your name is \(user)")
+        showAlert(title: "Enter a name in the name field ☘️", message: "Your name is \(userV.nameUser)")
     }
     
     
     @IBAction func forgotPassword() {
-        showAlert(title: "Enter your password in the password field 🌿", message: "Your password is \(password).")
+        showAlert(title: "Enter your password in the password field 🌿", message: "Your password is \(userV.passwordUser).")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
