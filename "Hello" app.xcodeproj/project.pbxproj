@@ -296,7 +296,7 @@
 				DEVELOPMENT_TEAM = L8R9RKU3SH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "\"Hello\" app/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "about me\n\"About me \"app";
+				INFOPLIST_KEY_CFBundleDisplayName = "\"About me \" app";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -325,7 +325,7 @@
 				DEVELOPMENT_TEAM = L8R9RKU3SH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "\"Hello\" app/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "about me\n\"About me \"app";
+				INFOPLIST_KEY_CFBundleDisplayName = "\"About me \" app";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
