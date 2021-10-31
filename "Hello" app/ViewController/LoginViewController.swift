@@ -23,12 +23,15 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarController = segue.destination as! UITabBarController
         for viewController in tabBarController.viewControllers! {
-               if  let welcomeVC = viewController as? WelcomeViewController {
-                   welcomeVC.userWelcomeLabel = userV.fullName
+               if let welcomeVC = viewController as? WelcomeViewController {
+                   welcomeVC.userWelcomeLabel = userV.applicationUser
                    tabBarController.selectedIndex = 1
+               } else if let aboutMeSegue = viewController as? UINavigationController {
+                   let aboutUserVC = aboutMeSegue.topViewController as! AboutMeViewController
+                   aboutUserVC.aboutMeLabelText = userV.aboutMe.hobby
                }
-           }
-       }
+        }
+    }
     
 // MARK: IBActions func
     

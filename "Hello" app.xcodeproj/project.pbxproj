@@ -16,6 +16,7 @@
 		F8910EC12729428600F1AFBF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8910EC02729428600F1AFBF /* WelcomeViewController.swift */; };
 		F8EE5264272F0A8F0068B85E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE5263272F0A8F0068B85E /* Model.swift */; };
 		F8EE5268272F2DB70068B85E /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE5267272F2DB70068B85E /* AboutMeViewController.swift */; };
+		F8EE526B272F35C50068B85E /* HobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EE526A272F35C50068B85E /* HobbyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F8910EC02729428600F1AFBF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F8EE5263272F0A8F0068B85E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F8EE5267272F2DB70068B85E /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		F8EE526A272F35C50068B85E /* HobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +66,7 @@
 			children = (
 				F838C81D27274103000C0262 /* AppDelegate.swift */,
 				F838C81F27274103000C0262 /* SceneDelegate.swift */,
-				F8910EC02729428600F1AFBF /* WelcomeViewController.swift */,
-				F838C82127274103000C0262 /* LoginViewController.swift */,
-				F8EE5267272F2DB70068B85E /* AboutMeViewController.swift */,
+				F8EE5269272F34A60068B85E /* ViewController */,
 				F838C82327274103000C0262 /* Main.storyboard */,
 				F8EE5263272F0A8F0068B85E /* Model.swift */,
 				F838C82627274105000C0262 /* Assets.xcassets */,
@@ -74,6 +74,17 @@
 				F838C82B27274105000C0262 /* Info.plist */,
 			);
 			path = "\"Hello\" app";
+			sourceTree = "<group>";
+		};
+		F8EE5269272F34A60068B85E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F838C82127274103000C0262 /* LoginViewController.swift */,
+				F8910EC02729428600F1AFBF /* WelcomeViewController.swift */,
+				F8EE5267272F2DB70068B85E /* AboutMeViewController.swift */,
+				F8EE526A272F35C50068B85E /* HobbyViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 			files = (
 				F8EE5264272F0A8F0068B85E /* Model.swift in Sources */,
 				F838C82227274103000C0262 /* LoginViewController.swift in Sources */,
+				F8EE526B272F35C50068B85E /* HobbyViewController.swift in Sources */,
 				F8910EC12729428600F1AFBF /* WelcomeViewController.swift in Sources */,
 				F838C81E27274103000C0262 /* AppDelegate.swift in Sources */,
 				F8EE5268272F2DB70068B85E /* AboutMeViewController.swift in Sources */,
