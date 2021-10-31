@@ -26,6 +26,8 @@ class ViewController: UIViewController {
         welcomeVC.userWelcomeLabel = user
     }
     
+// MARK: IBActions func
+    
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNamelabel.text = ""
         passwordLabel.text = ""
@@ -56,6 +58,8 @@ class ViewController: UIViewController {
     
 }
 
+// MARK: Private Methods
+
 extension ViewController: UITextFieldDelegate {
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(
@@ -72,15 +76,13 @@ extension ViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == userNamelabel {
-            textField.resignFirstResponder()
             passwordLabel.becomeFirstResponder()
-        } else if textField == passwordLabel {
-            textField.resignFirstResponder()
-            self.logInPressed()
-            self.performSegue(withIdentifier: "welcomeVC", sender: self)
-        }
-        return true
-    }
+        } else {
+            logInPressed()
+            performSegue(withIdentifier: "welcomeVC", sender: self)
+            }
+    return true
+}
     
 }
 
