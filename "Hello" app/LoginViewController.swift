@@ -27,7 +27,6 @@ class ViewController: UIViewController {
                    welcomeVC.userWelcomeLabel = userV.fullName
                    tabBarController.selectedIndex = 1
                }
-            
            }
        }
     

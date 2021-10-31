@@ -192,11 +192,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Dk5-QH-714">
-                        <barButtonItem key="rightBarButtonItem" title="Hobby" id="yM4-EI-wKO"/>
+                        <barButtonItem key="rightBarButtonItem" title="Hobby" id="yM4-EI-wKO">
+                            <connections>
+                                <segue destination="qet-Gy-ndz" kind="show" id="Ylu-Pe-oHq"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="qet-Gy-ndz" kind="show" identifier="hobbySegue" id="TPb-VY-ofV"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAa-eC-Ijw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
